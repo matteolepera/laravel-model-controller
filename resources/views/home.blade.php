@@ -1,16 +1,13 @@
-@vite(['resources/js/app.js'])
+@extends("layouts.base-layout")
 
-<!DOCTYPE html>
-<html lang="en">
+@section('win-title', 'Home Page')
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-</head>
+@section("main")
+    <h1>Film</h1>
 
-<body>
-    <h1>home</h1>
-</body>
-
-</html>
+    <ul>
+        @foreach ($movies as $movie)
+            <li>{{ $movie['title'] }}</li>
+        @endforeach
+    </ul>
+@endsection
