@@ -9,7 +9,8 @@
 </head>
 
 <body>
-    <main>
+    @include("partials.header")
+    <main class="container py-5">
         @yield("main")
     </main>
 </body>
